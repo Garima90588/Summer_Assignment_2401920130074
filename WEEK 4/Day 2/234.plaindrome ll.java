@@ -1,0 +1,22 @@
+class Solution {
+    public boolean isPalindrome(ListNode head) {
+        ArrayList<Integer> arr = new ArrayList<>();
+        ListNode temp=head;
+        while(temp!=null)
+        {
+            arr.add(temp.val);
+            temp=temp.next;
+        }
+        int i=0;
+        int j=arr.size()-1;
+        while(i<j)
+        {
+            if(arr.get(i)!=arr.get(j))
+               return false;
+            i+=1;
+            j-=1;
+        }
+        return true;
+        
+    }
+}
